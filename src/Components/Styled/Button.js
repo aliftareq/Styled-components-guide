@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { H1 } from "./H1";
 
 export const StyleButton = styled.button`
     display: inline-block;
@@ -16,16 +17,26 @@ export const StyleButton = styled.button`
     color:${(props) =>
         props.variant === 'primary' ? 'Black' : 'white'};
 
+    // &:hover{
+    //     background-color:white;
+    //     color:black;
+    // };
+
+    // &:last-child{
+    //     background-color: orange;
+    // }
+`;
+
+export const StyledButtonWithHover = styled(StyleButton)`
+    
     &:hover{
         background-color:white;
         color:black;
-    };
-
-    &:last-child{
-        background-color: orange;
     }
-`;
-
-export const styledButtonWithHover = styled.button`
-        
+`
+export const StyledH1WithHover = styled(H1)`
+    
+    &:hover{
+        color:white;
+    }
 `
